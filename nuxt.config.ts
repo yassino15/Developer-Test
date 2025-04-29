@@ -2,5 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['@nuxt/image']
+  modules: ['@nuxt/image'],
+  css: ['~/assets/css/main.css'],
+  plugins: ['~/plugins/bootstrap.client.ts']
 })
