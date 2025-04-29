@@ -1,1 +1,54 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Dubai Font */
+@font-face {
+    font-family: 'Dubai';
+    src: url('/fonts/dubai-cufonfonts/Dubai-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dubai';
+    src: url('/fonts/dubai-cufonfonts/Dubai-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dubai';
+    src: url('/fonts/dubai-cufonfonts/Dubai-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Dubai';
+    src: url('/fonts/dubai-cufonfonts/Dubai-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Dubai', sans-serif;
+}
+
+.font-dubai-light {
+    font-weight: 300;
+}
+
+.font-dubai-regular {
+    font-weight: 400;
+}
+
+.font-dubai-medium {
+    font-weight: 500;
+}
+
+.font-dubai-bold {
+    font-weight: 700;
+}
