@@ -45,14 +45,5 @@
 </template>
 <script setup></script>
 <style scoped>
-.footer {
-    background-color: black;
-}
-
-.footer-divider {
-    height: 2px;
-    background-color: white;
-    opacity: 1;
-    border: none;
-}
+@import url('@/assets/css/footer.css');
 </style>

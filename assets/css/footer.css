@@ -1,0 +1,10 @@
+.footer {
+    background-color: black;
+}
+
+.footer-divider {
+    height: 2px;
+    background-color: white;
+    opacity: 1;
+    border: none;
+}
