@@ -1,6 +1,11 @@
 <template>
     <div>
-
+        <HeroSaleSection />
+        <JewelryBanner />
+        <SpecialOffers />
+        <Banner />
+        <NewArrivals />
+        <MembershipPromo />
     </div>
 </template>
 
