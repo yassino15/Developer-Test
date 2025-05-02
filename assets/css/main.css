@@ -52,3 +52,9 @@ body {
 .font-dubai-bold {
     font-weight: 700;
 }
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
