@@ -1,9 +1,10 @@
 .footer {
     background-color: black;
+    border-top: 3px solid white;
 }
 
 .footer-divider {
-    height: 2px;
+    height: 1.5px;
     background-color: white;
     opacity: 1;
     border: none;
