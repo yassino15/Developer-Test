@@ -1,0 +1,46 @@
+.hero-sale-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.hero-slide {
+    width: 100%;
+    aspect-ratio: 15 / 6;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 1%;
+    bottom: 0;
+    color: black;
+    padding: 20px;
+    max-width: 400px;
+}
+
+.swiper-custom-pagination {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.swiper-pagination-bullet {
+    width: 24px !important;
+    height: 3px !important;
+    border-radius: 0;
+    background-color: #bbb;
+    opacity: 1;
+    margin: 0 5px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #333;
+}
