@@ -10,5 +10,5 @@
 <script setup>
 </script>
 <style>
-/* @import url('@/assets/css/jewelry.css'); */
+@import url('@/assets/css/jewelry.css');
 </style>
