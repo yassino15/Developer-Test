@@ -2,7 +2,7 @@
     <div class="button-container">
         <button class="custom-button" :style="{ backgroundColor: bgColor, color: color }" @mouseover="isHovered = true"
             @mouseleave="isHovered = false" @click="$emit('click')">
-            <span class="button-text" :class="{ 'text-hovered': isHovered }">{{ text }}</span>
+            <span class="button-text font-dubai-medium" :class="{ 'text-hovered': isHovered }">{{ text }}</span>
             <span class="arrow-icon" :class="{ 'arrow-hovered': isHovered }">
                 <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" :fill="color"
                     text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
@@ -40,6 +40,7 @@ const isHovered = ref(false);
 .button-container {
     position: relative;
     display: inline-block;
+    height: fit-content;
 }
 
 .custom-button {
@@ -53,6 +54,7 @@ const isHovered = ref(false);
     cursor: pointer;
     z-index: 2;
     transition: transform 0.3s ease;
+    min-width: max-content;
     width: 220px;
 }
 
@@ -74,6 +76,7 @@ const isHovered = ref(false);
 .button-text {
     font-size: 1.2rem;
     transition: letter-spacing 0.3s ease;
+    text-transform: uppercase;
 }
 
 .button-text.text-hovered {
