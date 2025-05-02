@@ -1,35 +1,36 @@
 .hero-sale-container {
-    position: relative;
     width: 100%;
     margin-bottom: 40px;
 }
 
 .hero-slide {
     width: 100%;
-    aspect-ratio: 15 / 6;
     background-size: cover;
     background-position: center;
     position: relative;
     display: flex;
     align-items: center;
+    flex-direction: column;
+}
+
+.hero-slide-image {
+    width: 100%;
+    aspect-ratio: 6 / 4;
+    background-size: cover;
+    background-position: center;
 }
 
 .hero-content {
-    position: absolute;
-    top: 50%;
-    left: 1%;
-    bottom: 0;
-    color: black;
+    background-color: rgba(255, 255, 255, 0.85);
     padding: 20px;
-    max-width: 400px;
+    color: black;
 }
 
 .swiper-custom-pagination {
-    position: relative;
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .swiper-pagination-bullet {
@@ -43,4 +44,56 @@
 
 .swiper-pagination-bullet-active {
     background-color: #333;
+}
+
+.hero-title,
+.hero-text {
+    text-transform: uppercase;
+}
+
+.hero-title {
+    font-size: clamp(1rem, 2vw + 0.6rem, 3rem);
+    margin-bottom: 8px;
+}
+
+.hero-text {
+    font-size: clamp(0.6rem, 2vw + 0.35rem, 1.5rem);
+    margin-bottom: 12px;
+}
+
+@media (min-width: 768px) {
+    .hero-slide {
+        position: relative;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .hero-slide-image {
+        flex: 1;
+        aspect-ratio: 15 / 6;
+    }
+
+    .hero-content {
+        position: absolute;
+        top: 50%;
+        left: 1%;
+        transform: translateY(-50%);
+        bottom: 0;
+        color: black;
+        padding: 20px;
+        background-color: transparent;
+        max-width: 25%;
+        margin-left: 2.2rem;
+    }
+
+    .hero-text {
+        margin: 0;
+        margin-top: 1rem;
+        margin-bottom: 1.25rem;
+    }
+
+    .swiper-custom-pagination {
+        position: relative;
+        margin-top: 30px;
+    }
 }
