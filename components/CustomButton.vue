@@ -1,0 +1,111 @@
+<template>
+    <div class="button-container">
+        <button class="custom-button" :style="{ backgroundColor: bgColor, color: color }" @mouseover="isHovered = true"
+            @mouseleave="isHovered = false" @click="$emit('click')">
+            <span class="button-text" :class="{ 'text-hovered': isHovered }">{{ text }}</span>
+            <span class="arrow-icon" :class="{ 'arrow-hovered': isHovered }">
+                <svg xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision" :fill="color"
+                    text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd"
+                    clip-rule="evenodd" viewBox="0 0 512 243.58" width="42">
+                    <path fill-rule="nonzero"
+                        d="M373.57 0 512 120.75 371.53 243.58l-20.92-23.91 94.93-83L0 137.09v-31.75l445.55-.41-92.89-81.02z" />
+                </svg>
+            </span>
+        </button>
+        <div class="button-outline" :class="{ 'outline-active': isHovered }" :style="{ borderColor: bgColor }"></div>
+    </div>
+</template>
+
+<script setup>
+const props = defineProps({
+    text: {
+        type: String,
+        default: 'SHOP NOW'
+    },
+    bgColor: {
+        type: String,
+        default: '#000000'
+    },
+    color: {
+        type: String,
+        default: '#ffffff'
+    },
+});
+
+defineEmits(['click']);
+const isHovered = ref(false);
+</script>
+
+<style scoped>
+.button-container {
+    position: relative;
+    display: inline-block;
+}
+
+.custom-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border: none;
+    letter-spacing: 1px;
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 0.3s ease;
+    width: 220px;
+}
+
+.button-outline {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: -5px;
+    bottom: -5px;
+    border: 1px solid;
+    z-index: 1;
+    transition: transform 0.3s ease;
+}
+
+.button-outline.outline-active {
+    transform: translate(-5px, -5px);
+}
+
+.button-text {
+    font-size: 1.2rem;
+    transition: letter-spacing 0.3s ease;
+}
+
+.button-text.text-hovered {
+    letter-spacing: 2px;
+}
+
+.arrow-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+    /* width: 40px; */
+    /* height: 24px; */
+}
+
+.arrow-icon.arrow-hovered {
+    transform: translateX(5px);
+}
+
+@media screen and (max-width: 768px) {
+    .custom-button {
+        padding: 4px 6px;
+        width: 125px;
+        letter-spacing: .2px;
+    }
+
+    .button-text {
+        font-size: .8rem;
+    }
+
+    .arrow-icon {
+        margin: 0;
+    }
+}
+</style>
