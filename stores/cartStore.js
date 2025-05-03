@@ -26,30 +26,41 @@ export const useCartStore = defineStore("cart", () => {
 
   const confirmCart = async () => {
     try {
+      const productsToSend = cart.value.map((item) => ({
+        productId: item.id,
+        quantity: item.quantity,
+      }));
+
       const data = await $fetch("https://fakestoreapi.com/carts", {
         method: "POST",
         body: {
-          id: 0,
           userId: userId.value,
-          date: new Date().toISOString(),
-          products: cart.value,
+          date: new Date().toISOString().split("T")[0],
+          products: productsToSend,
         },
       });
-      return data.value;
+      clearCart();
+      alert(`order confirmed!`);
+      return data;
     } catch (error) {
-      console.error("Error posting cart:", error);
+      console.error("Error confirming cart:", error);
     }
   };
 
-  const fetchCart = async (id) => {
-    try {
-      const data = await $fetch(`https://fakestoreapi.com/carts/${id}`);
-      // cart.value.push(...data.value.products);
-      return data.value;
-    } catch (error) {
-      console.error("Error posting cart:", error);
-    }
-  };
+  // const fetchCart = async () => {
+  //   try {
+  //     const carts = await $fetch(
+  //       `https://fakestoreapi.com/carts/user/${userId.value}`
+  //     );
+  //     const latestCart = carts.at(-1);
+  //     if (latestCart) {
+  //       cart.value = latestCart.products;
+  //     }
+  //     return latestCart;
+  //   } catch (error) {
+  //     console.error("Error fetching user cart:", error);
+  //   }
+  // };
 
   return {
     cart,
@@ -59,6 +70,6 @@ export const useCartStore = defineStore("cart", () => {
     clearCart,
     updateQuantity,
     confirmCart,
-    fetchCart,
+    // fetchCart,
   };
 });

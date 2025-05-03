@@ -25,7 +25,7 @@
 
 <script setup>
 const store = useCartStore();
-store.fetchCart(2);
+// store.fetchCart(2);
 
 const cart = computed(() => store.cart);
 
