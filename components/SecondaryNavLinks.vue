@@ -21,7 +21,7 @@ defineProps({
 const links = [
     { title: 'Home', path: '/' },
     { title: 'About Us', path: '/about-us' },
-    { title: 'Media Center', path: '/media-center' },
+    { title: 'Media Center', path: '/' },
     { title: 'Contact Us', path: '/contact-us' }
 ];
 </script>
