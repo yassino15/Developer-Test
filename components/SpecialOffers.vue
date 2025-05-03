@@ -1,7 +1,7 @@
 <template>
     <div class="px-5 mt-5 pt-5 pb-2">
         <h1 class="title">special offers</h1>
-        <ProductsSwiper :products="products" :slidesPerView="4.5">
+        <ProductsSwiper :products="products" :slidesPerView="4.5" :showNavButtons="true">
             <template #product-info="{ product }">
                 <div class="text-center">
                     <p class="card-text fs-3 mb-2 font-dubai-light">{{ product.title }}</p>
