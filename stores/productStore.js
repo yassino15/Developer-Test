@@ -17,6 +17,19 @@ export const useProductStore = defineStore("product", () => {
     loading.value = false;
   };
 
+  const fetchProductsByCategory = async (category) => {
+    loading.value = true;
+    const { data, error } = await useFetch(
+      `https://fakestoreapi.com/products/category/${category}`
+    );
+    if (!error.value) {
+      return data.value      
+    } else {
+      console.error("Error:", error.value);
+    }
+    loading.value = false;
+  };
+
   const getProductsByCategory = (category) => {
     return computed(() =>
       products.value.filter((p) => p.category === category)
@@ -40,5 +53,6 @@ export const useProductStore = defineStore("product", () => {
     fetchProducts,
     getProductsByCategory,
     getProductById,
+    fetchProductsByCategory,
   };
 });
