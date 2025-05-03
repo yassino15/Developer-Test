@@ -1,7 +1,7 @@
 <template>
-    <div class="card h-100 shadow-sm product-card">
+    <div class="card h-100 shadow-sm product-card hover-scale">
         <div class="position-relative">
-            <img :src="props.product.image" class="card-img-top p-3" :alt="props.product.title"
+            <img :src="props.product.image" class="card-img-top p-3 img-hover" :alt="props.product.title"
                 style="height: 200px; object-fit: contain;">
             <div class="position-absolute top-0 end-0 p-2">
                 <span class="badge bg-primary">{{ props.product.rating.rate }} ★</span>
@@ -14,7 +14,6 @@
                 <span class="h5 mb-0 text-primary fw-bold">${{ props.product.price.toFixed(2) }}</span>
                 <span class="text-muted small">{{ props.product.rating.count }} reviews</span>
             </div>
-            <!-- <button class="btn btn-outline-primary w-100 mt-3">Add to Cart</button> -->
             <nuxt-link :to="`/product/${props.product.id}`" class="btn btn-outline-primary w-100 mt-3">
                 Visit Product
             </nuxt-link>
@@ -39,12 +38,5 @@ const truncatedDescription = computed(() => {
 
 
 <style scoped>
-.product-card {
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-}
+@import url('@/assets/css/card.css');
 </style>

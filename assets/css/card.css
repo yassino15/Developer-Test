@@ -1,0 +1,20 @@
+.product-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.hover-scale {
+    overflow: hidden;
+}
+
+.img-hover {
+    transition: transform 0.4s ease;
+}
+
+.hover-scale:hover .img-hover {
+    transform: scale(1.1);
+}
