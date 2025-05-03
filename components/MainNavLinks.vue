@@ -18,9 +18,9 @@ defineProps({
     }
 })
 const links = [
-    { title: 'Electronics', path: '/electronics' },
-    { title: 'Jewelry', path: '/jewelry' },
-    { title: 'Men Clothing', path: '/men-clothing' },
-    { title: 'Women Clothing', path: '/women-clothing' }
+    { title: 'Electronics', path: '/products/electronics', id: '' },
+    { title: 'jewelery', path: '/products/jewelery', id: '' },
+    { title: 'Men Clothing', path: "/products/men's clothing", id: '' },
+    { title: 'Women Clothing', path: "/products/women's clothing" , id: ''}
 ];
 </script>
