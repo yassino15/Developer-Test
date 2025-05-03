@@ -59,3 +59,14 @@ body {
     font-weight: 700;
     text-transform: uppercase;
 }
+
+.page-enter-active,
+.page-leave-active {
+  transition: all 0.3s;
+}
+.page-enter-from,
+.page-leave-to {
+  opacity: 0;
+  filter: blur(0.5rem);
+  transform: translateY(10px);
+}
