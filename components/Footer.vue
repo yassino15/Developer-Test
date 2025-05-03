@@ -21,18 +21,18 @@
             </div>
             <div class="col-12 col-md-3 px-0 social-media">
                 <div class="d-flex gap-3 mt-3 mb-1 justify-content-center">
-                    <NuxtLink to="/">
+                    <a href="https://www.facebook.com/" target="_blank">
                         <NuxtImg src="/icons/facebook.png" alt="facebook" height="30" class="logo" />
-                    </NuxtLink>
-                    <NuxtLink to="/">
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank">
                         <NuxtImg src="/icons/youtube.png" alt="youtube" height="30" class="logo" />
-                    </NuxtLink>
-                    <NuxtLink to="/">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
                         <NuxtImg src="/icons/instagram.png" alt="instagram" height="30" class="logo" />
-                    </NuxtLink>
-                    <NuxtLink to="/">
+                    </a>
+                    <a href="https://x.com/" target="_blank">
                         <NuxtImg src="/icons/twitter.png" alt="twitter" height="30" class="logo" />
-                    </NuxtLink>
+                    </a>
                 </div>
             </div>
 
