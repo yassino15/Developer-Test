@@ -2,3 +2,9 @@
     background-color: #ede635;
     padding: 5rem 10rem;
 }
+
+@media screen and (max-width: 1024px) {
+    .promo-container {
+        padding: 3rem 2rem;
+    }
+}
