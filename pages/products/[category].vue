@@ -24,6 +24,7 @@
             </div>
         </div>
     </div>
+    <div v-else><Loader /></div>
 </template>
 
 <script setup>
