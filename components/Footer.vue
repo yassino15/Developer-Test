@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid footer text-white fs-4 pt-4">
+    <div class="container-fluid footer text-white footer-link pt-4">
         <div class="row px-5 pt-3 align-items-center">
             <div class="col-12 col-md-3 px-0">
                 <NuxtLink to="/">
@@ -7,13 +7,13 @@
                 </NuxtLink>
             </div>
             <SecondaryNavLinks containerClass="col-12 col-md-2 offset-0 offset-md-1 gap-3 text-center text-md-start"
-                linkClass="nav-link my-4 text-white font-dubai-light" />
+                linkClass="nav-link my-4 text-white font-dubai-light footer-link" />
 
             <MainNavLinks containerClass="col-12 col-md-4 gap-3 text-center text-md-start"
-                linkClass="font-dubai-light nav-link text-uppercase my-4 text-white" />
+                linkClass="font-dubai-light nav-link text-uppercase my-4 text-white footer-link" />
 
-            <div class="col-12 col-md-2 text-center text-md-start">
-                <h2 class="font-dubai-medium">Contact us</h2>
+            <div class="col-12 col-md-2 text-center text-md-start pe-0">
+                <h2 class="font-dubai-medium footer-link">Contact us</h2>
                 <p>+971 00 000 0000</p>
                 <p>+971 00 000 0000</p>
                 <a href="mailto:info@sample.com" class="text-decoration-none text-white"

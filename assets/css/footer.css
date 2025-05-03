@@ -9,3 +9,7 @@
     opacity: 1;
     border: none;
 }
+
+.footer-link {
+    font-size: clamp(12px, 1.7vw, 24px);
+}
