@@ -1,7 +1,7 @@
 <template>
     <div class="d-flex" :class="containerClass">
         <NuxtLink to="/login" class="mx-2" aria-label="Account">
-            <NuxtImg src="/Icons/login.png" alt="login" width="25" />
+            <NuxtImg src="/Icons/Login.png" alt="login" width="25" />
         </NuxtLink>
         <NuxtLink to="/wish-list" class="mx-2" aria-label="Wishlist">
             <NuxtImg src="/Icons/heart.png" alt="fav" width="25" />
