@@ -58,10 +58,10 @@
 }
 
 .nav-container {
-    padding: 1.5rem;
+    padding: 1rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
     .nav-container {
         padding: 0 3rem 0 5rem;
     }
