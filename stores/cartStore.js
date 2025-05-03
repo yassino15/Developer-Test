@@ -3,16 +3,20 @@ import { ref } from "vue";
 
 export const useCartStore = defineStore("cart", () => {
   const cart = ref([]);
-  const userId = ref(1);
+  const userId = ref(2);
 
-  const addToCart = (productId, quantity = 1) => {
-    const item = cart.value.find((p) => p.productId === productId);
-    if (item) item.quantity += quantity;
-    else cart.value.push({ productId, quantity });
+  const addToCart = (product) => {
+    const item = cart.value.find((p) => p.id === product.id);
+    if (item) item.quantity += product.quantity;
+    else cart.value.push(product);
   };
 
   const removeFromCart = (productId) => {
-    cart.value = cart.value.filter((p) => p.productId !== productId);
+    cart.value = cart.value.filter((p) => p.id !== productId);
+  };
+
+  const clearCart = () => {
+    cart.value = [];
   };
 
   const updateQuantity = (productId, quantity) => {
@@ -21,29 +25,30 @@ export const useCartStore = defineStore("cart", () => {
   };
 
   const confirmCart = async () => {
-    const { data, error } = await useFetch("https://fakestoreapi.com/carts", {
-      method: "POST",
-      body: {
-        userId: userId.value,
-        date: new Date().toISOString(),
-        products: cart.value,
-      },
-    });
-    if (error.value) {
-      console.error("Error posting cart:", error.value);
+    try {
+      const data = await $fetch("https://fakestoreapi.com/carts", {
+        method: "POST",
+        body: {
+          id: 0,
+          userId: userId.value,
+          date: new Date().toISOString(),
+          products: cart.value,
+        },
+      });
+      return data.value;
+    } catch (error) {
+      console.error("Error posting cart:", error);
     }
-    return data.value;
   };
 
   const fetchCart = async (id) => {
-    const { data, error } = await useFetch(
-      `https://fakestoreapi.com/carts/${id}`
-    );
-    if (error.value) {
-      console.error("Failed to fetch cart:", error.value);
-      return null;
+    try {
+      const data = await $fetch(`https://fakestoreapi.com/carts/${id}`);
+      // cart.value.push(...data.value.products);
+      return data.value;
+    } catch (error) {
+      console.error("Error posting cart:", error);
     }
-    return data.value;
   };
 
   return {
@@ -51,6 +56,7 @@ export const useCartStore = defineStore("cart", () => {
     userId,
     addToCart,
     removeFromCart,
+    clearCart,
     updateQuantity,
     confirmCart,
     fetchCart,
