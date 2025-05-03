@@ -8,6 +8,8 @@ export default defineNuxtConfig({
     'swiper/css',
     'swiper/css/pagination',
     'swiper/css/autoplay',
+    'swiper/swiper-bundle.css',
+    '@/assets/css/hero.css'
   ],
   plugins: ['~/plugins/bootstrap.client.ts'],
 })
