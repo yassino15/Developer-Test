@@ -24,7 +24,6 @@
                         <button class="btn btn-primary btn-lg" @click="addToCart" :disabled="isAddingToCart">
                             <span v-if="isAddingToCart" class="spinner-border spinner-border-sm me-2" role="status"
                                 aria-hidden="true"></span>
-                            <i v-else class="bi bi-cart-plus me-2"></i>
                             Add to Cart
                         </button>
                         <NuxtLink :to="`/products/${product.category}`" class="btn btn-outline-secondary">
@@ -48,17 +47,13 @@ const props = defineProps({
 })
 const quantity = ref(1)
 const isAddingToCart = ref(false)
+const cartStore = useCartStore()
 const addToCart = async () => {
     try {
         isAddingToCart.value = true
-
-        // Here you would typically call your cart API
-        // This is a simulated API call
         await new Promise(resolve => setTimeout(resolve, 800))
-
-        // Show success toast or notification
         alert(`Added ${quantity.value} x ${props.product.title} to cart!`)
-
+        cartStore.addToCart({ ...props.product, quantity: quantity.value })
         quantity.value = 1
     } catch (err) {
         console.error('Error adding to cart:', err)
