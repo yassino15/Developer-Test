@@ -8,26 +8,28 @@ export const useProductStore = defineStore("product", () => {
 
   const fetchProducts = async () => {
     loading.value = true;
-    const { data, error } = await useFetch("https://fakestoreapi.com/products");
-    if (!error.value) {
-      products.value = data.value;
-    } else {
-      console.error("Error:", error.value);
+    try {
+      const data = await $fetch("https://fakestoreapi.com/products");
+      products.value = data;
+    } catch (error) {
+      console.error("Error:", error);
     }
     loading.value = false;
   };
 
   const fetchProductsByCategory = async (category) => {
     loading.value = true;
-    const { data, error } = await useFetch(
-      `https://fakestoreapi.com/products/category/${category}`
-    );
-    if (!error.value) {
-      return data.value      
-    } else {
-      console.error("Error:", error.value);
+    try {
+      const data = await $fetch(
+        `https://fakestoreapi.com/products/category/${category}`
+      );
+      return data;
+    } catch (error) {
+      console.error("Error:", error);
+      return [];
+    } finally {
+      loading.value = false;
     }
-    loading.value = false;
   };
 
   const getProductsByCategory = (category) => {
@@ -37,14 +39,13 @@ export const useProductStore = defineStore("product", () => {
   };
 
   const getProductById = async (id) => {
-    const { data, error } = await useFetch(
-      `https://fakestoreapi.com/products/${id}`
-    );
-    if (error.value) {
-      console.error("Failed to load product:", error.value);
+    try {
+      const data = await $fetch(`https://fakestoreapi.com/products/${id}`);
+      return data;
+    } catch (error) {
+      console.error("Failed to load product:", error);
       return null;
     }
-    return data.value;
   };
 
   return {
