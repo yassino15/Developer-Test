@@ -2,7 +2,7 @@
   <header>
     <div class="container-fluid nav-container">
       <!-- Top row: Secondary links (desktop only) -->
-      <div class="row d-none d-md-flex justify-content-end py-2 pt-4">
+      <div class="row d-none d-lg-flex justify-content-end py-2 pt-4">
         <div class="col-auto">
           <SecondaryNavLinks containerClass="d-flex" linkClass="nav-link mx-2">
             <NuxtLink to="#" class="font-dubai-bold nav-link mx-2">AR</NuxtLink>
@@ -12,18 +12,18 @@
 
       <div class="row align-items-center">
         <!-- Logo(left) -->
-        <div class="col-md-2 col-6 d-flex align-items-center">
+        <div class="col-lg-2 col-6 d-flex align-items-center">
           <NuxtLink to="/">
             <NuxtImg src="/icons/logo-black.png" alt="Developer Test Logo" height="90" class="logo" />
           </NuxtLink>
         </div>
 
         <!-- Main category links (center) -->
-        <MainNavLinks containerClass="col-md-6 d-none d-md-flex justify-content-center ps-0"
+        <MainNavLinks containerClass="col-lg-6 d-none d-lg-flex justify-content-center ps-0"
           linkClass="font-dubai-medium nav-link main-link text-uppercase mx-3" />
 
         <!-- Search and Icons(right) -->
-        <div class="col-md-4 d-none d-md-flex align-items-center justify-content-end">
+        <div class="col-lg-4 d-none d-lg-flex align-items-center justify-content-end">
           <form class="me-3 search-form">
             <div class="input-group search-wrapper">
               <input class="form-control border-0 search-input" type="search" placeholder="Search"
@@ -39,7 +39,7 @@
         </div>
 
         <!-- menu (for mobile) -->
-        <div class="col-6 d-flex d-md-none justify-content-end">
+        <div class="col-6 d-flex d-lg-none justify-content-end">
           <button class="btn btn-link text-black" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
             <NuxtImg src="/icons/menu.png" alt="" width="35" />
           </button>
@@ -59,14 +59,14 @@
         </form>
 
         <!-- Icons for mobile -->
-        <div class="d-flex justify-content-start my-3">
+        <div class="d-flex justify-content-start my-3" data-bs-dismiss="offcanvas" >
           <HeaderIcon containerClass="justify-content-start my-3" />
         </div>
 
         <nav class="nav flex-column">
-          <MainNavLinks linkClass="nav-link text-uppercase fw-bold py-2" />
-          <SecondaryNavLinks linkClass="nav-link my-2">
-            <NuxtLink to="#" class="nav-link font-dubai-bold py-2">AR</NuxtLink>
+          <MainNavLinks linkClass="nav-link text-uppercase fw-bold py-2" data-bs-dismiss="offcanvas"  />
+          <SecondaryNavLinks linkClass="nav-link my-2" data-bs-dismiss="offcanvas" >
+            <NuxtLink to="#" class="nav-link font-dubai-bold py-2" data-bs-dismiss="offcanvas" >AR</NuxtLink>
           </SecondaryNavLinks>
         </nav>
       </div>
