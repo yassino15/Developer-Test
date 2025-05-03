@@ -2,7 +2,7 @@
     <div class="container py-5">
         <div class="row align-items-center">
             <div class="col-md-6 mb-4 mb-md-0">
-                <NuxtImg src="/icons/logo-black.png" format="webp" class="img-fluid rounded shadow-sm"
+                <NuxtImg src="/Icons/logo-black.png" format="webp" class="img-fluid rounded shadow-sm"
                     alt="Customer Service" />
             </div>
             <div class="col-md-6">

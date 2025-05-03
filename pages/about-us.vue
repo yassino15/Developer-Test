@@ -10,7 +10,7 @@
 
         <div class="row align-items-center mb-5">
             <div class="col-md-6 mb-4 mb-md-0">
-                <NuxtImg src="/icons/logo-black.png" class="img-fluid rounded shadow-sm"
+                <NuxtImg src="/Icons/logo-black.png" class="img-fluid rounded shadow-sm"
                     alt="Our Mission" />
             </div>
             <div class="col-md-6">

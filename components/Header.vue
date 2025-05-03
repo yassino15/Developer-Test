@@ -14,7 +14,7 @@
         <!-- Logo(left) -->
         <div class="col-lg-2 col-6 d-flex align-items-center">
           <NuxtLink to="/">
-            <NuxtImg src="/icons/logo-black.png" alt="Developer Test Logo" height="90" class="logo" />
+            <NuxtImg src="/Icons/logo-black.png" alt="Developer Test Logo" height="90" class="logo" />
           </NuxtLink>
         </div>
 
@@ -29,7 +29,7 @@
               <input class="form-control border-0 search-input" type="search" placeholder="Search"
                 aria-label="Search" />
               <span class="input-group-text border-0 bg-transparent search-icon-wrapper">
-                <NuxtImg src="/icons/search.png" alt="search" width="16" />
+                <NuxtImg src="/Icons/search.png" alt="search" width="16" />
               </span>
             </div>
           </form>
@@ -41,7 +41,7 @@
         <!-- menu (for mobile) -->
         <div class="col-6 d-flex d-lg-none justify-content-end">
           <button class="btn btn-link text-black" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
-            <NuxtImg src="/icons/menu.png" alt="" width="35" />
+            <NuxtImg src="/Icons/menu.png" alt="" width="35" />
           </button>
         </div>
       </div>

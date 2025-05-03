@@ -3,7 +3,7 @@
         <div class="row px-5 pt-3 align-items-center">
             <div class="col-12 col-md-3 px-0">
                 <NuxtLink to="/">
-                    <NuxtImg src="/icons/logo.png" alt="Developer Test Logo" class="w-100" />
+                    <NuxtImg src="/Icons/logo.png" alt="Developer Test Logo" class="w-100" />
                 </NuxtLink>
             </div>
             <SecondaryNavLinks containerClass="col-12 col-md-2 offset-0 offset-md-1 gap-3 text-center text-md-start"
@@ -22,16 +22,16 @@
             <div class="col-12 col-md-3 px-0 social-media">
                 <div class="d-flex gap-3 mt-3 mb-1 justify-content-center">
                     <a href="https://www.facebook.com/" target="_blank">
-                        <NuxtImg src="/icons/facebook.png" alt="facebook" height="30" class="logo" />
+                        <NuxtImg src="/Icons/facebook.png" alt="facebook" height="30" class="logo" />
                     </a>
                     <a href="https://www.youtube.com/" target="_blank">
-                        <NuxtImg src="/icons/youtube.png" alt="youtube" height="30" class="logo" />
+                        <NuxtImg src="/Icons/youtube.png" alt="youtube" height="30" class="logo" />
                     </a>
                     <a href="https://www.instagram.com/" target="_blank">
-                        <NuxtImg src="/icons/instagram.png" alt="instagram" height="30" class="logo" />
+                        <NuxtImg src="/Icons/instagram.png" alt="instagram" height="30" class="logo" />
                     </a>
                     <a href="https://x.com/" target="_blank">
-                        <NuxtImg src="/icons/twitter.png" alt="twitter" height="30" class="logo" />
+                        <NuxtImg src="/Icons/twitter.png" alt="twitter" height="30" class="logo" />
                     </a>
                 </div>
             </div>

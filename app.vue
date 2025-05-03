@@ -13,7 +13,7 @@ useHead({
     {
       rel: 'icon',
       type: 'image/x-icon',
-      href: '/icons/logo.png'
+      href: '/Icons/logo.png'
     }
   ]
 })
