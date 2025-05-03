@@ -11,6 +11,7 @@
             <CartItem v-for="item in cart" :key="item.id" :item="item" @remove="remove" />
         </div>
 
+        <CartFooter :total="totalPrice" @placeOrder="order" />
     </div>
 
     <div v-else class="text-center my-5">
